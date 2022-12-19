@@ -17,7 +17,6 @@ import java.util.Map;
 public final class PlayerStatsExpansion extends PlaceholderExpansion implements Configurable, Cacheable {
 
     final static String expansionVersion = "1.2.0";
-    final static String matchingPlayerStatsVersion = "1.7.2";
     private static PlayerStatsExpansion instance;
     private static Config config;
     private PlaceholderProvider placeholderProvider;
@@ -65,15 +64,7 @@ public final class PlayerStatsExpansion extends PlaceholderExpansion implements 
 
     @Override
     public boolean canRegister() {
-        Plugin plugin = Bukkit.getPluginManager().getPlugin("PlayerStats");
-        if (plugin != null) {
-            String version = plugin.getDescription().getVersion();
-            if (version.equalsIgnoreCase(matchingPlayerStatsVersion)) {
-                return true;
-            }
-        }
-        MyLogger.playerStatsVersionError();
-        return false;
+        return true;
     }
 
     @Override

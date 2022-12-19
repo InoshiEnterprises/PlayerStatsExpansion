@@ -25,15 +25,6 @@ public final class MyLogger {
         }
     }
 
-    public static void playerStatsVersionError() {
-        myLogger.warning("For PlayerStatsExpansion v" + PlayerStatsExpansion.expansionVersion + " to work, " +
-                "you need PlayerStats v" + PlayerStatsExpansion.matchingPlayerStatsVersion + "!" +
-                "\n" + "If you are using a newer version of PlayerStats, check if there is an updated version " +
-                        "of the expansion here: https://api.extendedclip.com/expansions/playerstatsexpansion/" +
-                "\n" + "Otherwise, download v" + PlayerStatsExpansion.matchingPlayerStatsVersion +
-                " of PlayerStats here: https://www.spigotmc.org/resources/playerstats.102347/");
-    }
-
     public static void clear() {
         loggedMessages.clear();
     }
